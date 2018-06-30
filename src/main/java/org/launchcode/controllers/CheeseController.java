@@ -82,12 +82,12 @@ public class CheeseController {
         return "redirect:";
     }
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String category(@RequestParam int[] categoryIds, Model model) {
-        model.addAttribute("cheeses", cheeseDao.findAll());
-        model.addAttribute("title", "default");
-        model.addAttribute("categories", categoryDao.findAll());
-        return "cheese/index";
-
-    }
+//    @RequestMapping(value = "category", method = RequestMethod.GET)
+//    public String category(@RequestParam int[] categoryIds, Model model) {
+//        model.addAttribute("cheeses", cheeseDao.findAll());
+//        model.addAttribute("title", "default");
+//        model.addAttribute("categories", categoryDao.findAll());
+//        return "cheese/index";
+//
+//    }
 }

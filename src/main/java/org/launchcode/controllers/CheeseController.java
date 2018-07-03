@@ -66,9 +66,10 @@ public class CheeseController {
 
     @RequestMapping(value = "remove", method = RequestMethod.GET)
     public String displayRemoveCheeseForm(Model model) {
+        model.addAttribute("categories", categoryDao.findAll());
         model.addAttribute("cheeses", cheeseDao.findAll());
         model.addAttribute("title", "Remove Cheese");
-        model.addAttribute("categories", categoryDao.findAll());
+
         return "cheese/remove";
     }
 
@@ -82,12 +83,4 @@ public class CheeseController {
         return "redirect:";
     }
 
-//    @RequestMapping(value = "category", method = RequestMethod.GET)
-//    public String category(@RequestParam int[] categoryIds, Model model) {
-//        model.addAttribute("cheeses", cheeseDao.findAll());
-//        model.addAttribute("title", "default");
-//        model.addAttribute("categories", categoryDao.findAll());
-//        return "cheese/index";
-//
-//    }
 }

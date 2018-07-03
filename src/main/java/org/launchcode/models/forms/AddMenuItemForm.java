@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public class AddMenuItemForm {
-    ;
+
     private Menu menu;
 
     public Menu getMenu() {
@@ -50,8 +50,7 @@ public class AddMenuItemForm {
 
     private int cheeseId;
 
-    public AddMenuItemForm(Menu menu, List cheeses) {
-
+    public AddMenuItemForm(Menu menu, Iterable<Cheese> cheeses) {
         this.menu = menu;
         this.cheeses = cheeses;
     }
